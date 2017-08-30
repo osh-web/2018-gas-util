@@ -4,5 +4,16 @@
   "main": "index.js",
   "repository": "https://github.com/osh-web/2018-gas-util.git",
   "author": "Tomohiko Himura <eiel.hal@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "upload": "gapps upload",
+    "build": "rollup -c rollup.config.js",
+    "deploy": "yarn build && yarn upload"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-gas": "^1.0.0"
+  }
 }
