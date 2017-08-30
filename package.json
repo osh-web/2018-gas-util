@@ -1,0 +1,8 @@
+{
+  "name": "2018-gas-util",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/osh-web/2018-gas-util.git",
+  "author": "Tomohiko Himura <eiel.hal@gmail.com>",
+  "license": "MIT"
+}
