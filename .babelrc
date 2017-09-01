@@ -1,10 +1,12 @@
 {
   "presets": [
+    "flow",
     [
       "env",
       {
         "modules": false
       }
     ]
-  ]
+  ],
+  "plugins": ["transform-object-rest-spread"]
 }

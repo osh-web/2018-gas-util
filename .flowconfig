@@ -1,0 +1,13 @@
+[ignore]
+.*dist.*
+.*node_modules.*
+.*tmp.*
+
+[include]
+
+[libs]
+lib
+
+[lints]
+
+[options]

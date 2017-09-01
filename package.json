@@ -6,14 +6,23 @@
   "author": "Tomohiko Himura <eiel.hal@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "check": "flow",
     "upload": "gapps upload",
-    "build": "rollup -c rollup.config.js",
-    "deploy": "yarn build && yarn upload"
+    "build": "rollup -c",
+    "deploy": "yarn check && yarn build && yarn upload"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
     "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-gas": "^1.0.0"
+    "rollup-plugin-gas": "^1.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.1",
+    "is-gas": "^0.0.5",
+    "node-fetch": "^1.7.2"
   }
 }

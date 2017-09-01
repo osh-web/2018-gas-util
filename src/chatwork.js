@@ -1,13 +1,15 @@
+// @flow
+import type {Adapter} from './chatwork/types'
 const BASE_URL = "https://api.chatwork.com/v2"
-const REQUEST = (url, options) => UrlFetchApp.fetch(url, options) 
 
-export default ({token, base_url = BASE_URL, request = REQUEST}) => {
-
-  // メッセージ送信
-  const createMessage = ({roomId, body}) => {
-  const method = 'POST';
-    const options = {
-      method,
+type Args<T> = {token: string, adapter: Adapter<T>, base_url?: string}
+type CreateMessage<T> = ({roomId: number, body: string}) => T
+export default function<T> ({token, adapter, base_url = BASE_URL}: Args<T>): {createMessage: CreateMessage<T>} {
+  const createMessage: CreateMessage<T> = ({ roomId, body }) => {
+    const path = `/rooms/${roomId}/messages`
+    const params = {
+      url: base_url + path,
+      method: 'post',
       headers: {
         'X-ChatWorkToken': token 
       },
@@ -15,14 +17,7 @@ export default ({token, base_url = BASE_URL, request = REQUEST}) => {
         body
       }
     }
-    const path = `/rooms/${roomId}/messages`
-    const url = base_url + path
-    const response = request(url, options)
-
-    if (response.getResponseCode() == 200) {
-      return JSON.parse(result.getContentText())
-    }
-    return {}
+    return adapter(params);
   }
 
   return {
