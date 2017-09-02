@@ -1,8 +1,8 @@
 // @flow
-declare var DriveApp: Object
+
 const toChatwork = ({url, name, lastUpdated}) => {
     const formattedLastUpdated = lastUpdated.toLocaleString()
-    const body = `[info][title]Googleドライブに更新がありました[/title]ファイル名: ${name} 
+    const body = `[info][title]Googleドライブに更新がありました[/title]ファイル名: ${name}
 更新時刻: ${formattedLastUpdated}
 ${url}[/info]`
     return body;
