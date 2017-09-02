@@ -4,11 +4,17 @@ import Countdown from './countdown'
 import adapter from './chatwork/gas'
 import {updateCheck} from './updateCheck'
 
-declare var PropertiesService: any // FIXME 型定義ちゃんとする
+const userProperties = PropertiesService.getUserProperties();
+const getToken = (() => {
+  const t = userProperties.getProperty('CHATWORK_TOKEN');
+  if (typeof t === 'string') {
+    return t;
+  }
+  throw new Error('not define userProperties: CHATWORK_TOKEN');
+})
 
-var userProperties = PropertiesService.getUserProperties();
 const chatwork = Chatwork({
-  token: userProperties.getProperty('CHATWORK_TOKEN'),
+  token: getToken(),
   adapter,
 })
 
@@ -43,3 +49,5 @@ global.countdown = () => {
   const text = Countdown(targetDate)
   client(text)
 }
+
+var gMimeType: gas$Enum$MimeType = ((MimeType: any): gas$Enum$MimeType);
