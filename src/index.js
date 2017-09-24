@@ -3,6 +3,7 @@ import Chatwork from './chatwork'
 import Countdown from './countdown'
 import adapter from './chatwork/gas'
 import {updateCheck} from './updateCheck'
+import buildHtmlNotify from './buildHtmlNotify'
 
 const userProperties = PropertiesService.getUserProperties();
 const getToken = (() => {
@@ -50,4 +51,9 @@ global.countdown = () => {
   client(text)
 }
 
-var gMimeType: gas$Enum$MimeType = ((MimeType: any): gas$Enum$MimeType);
+global.doPost = (e) => {
+  const message = buildHtmlNotify(JSON.parse(e.postData.contents));
+  if (message !== null) {
+    client(message);
+  }
+}

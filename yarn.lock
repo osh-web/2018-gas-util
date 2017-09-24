@@ -627,9 +627,9 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-flow-interfaces-google-apps-script@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/flow-interfaces-google-apps-script/-/flow-interfaces-google-apps-script-0.0.13.tgz#6afc8fad7123a49491b2930f3869d8da0001a103"
+flow-interfaces-google-apps-script@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/flow-interfaces-google-apps-script/-/flow-interfaces-google-apps-script-0.0.26.tgz#f880e346e02ccb32fa9243e51099a9bae103ce15"
 
 gas-entry-generator@^1.0.1:
   version "1.0.1"
@@ -738,8 +738,8 @@ ms@2.0.0:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
 node-fetch@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.2.tgz#c54e9aac57e432875233525f3c891c4159ffefd7"
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
