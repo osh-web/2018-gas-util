@@ -627,9 +627,9 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-flow-interfaces-google-apps-script@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/flow-interfaces-google-apps-script/-/flow-interfaces-google-apps-script-0.0.26.tgz#f880e346e02ccb32fa9243e51099a9bae103ce15"
+flow-interfaces-google-apps-script@0.1:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/flow-interfaces-google-apps-script/-/flow-interfaces-google-apps-script-0.1.0.tgz#eb90e7a2928d8f4c2a4e0da7e2c00a4e342557a1"
 
 gas-entry-generator@^1.0.1:
   version "1.0.1"
